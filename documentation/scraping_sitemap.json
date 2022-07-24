@@ -1,0 +1,160 @@
+{
+  "_id": "chicago-apt-sitemap-detailed",
+  "startUrl": [
+    "https://chicago.craigslist.org/search/apa"
+  ],
+  "selectors": [
+    {
+      "id": "pagination",
+      "parentSelectors": [
+        "_root",
+        "pagination"
+      ],
+      "paginationType": "auto",
+      "selector": "div:nth-of-type(3) .paginator a.next",
+      "type": "SelectorPagination"
+    },
+    {
+      "id": "listing-title",
+      "parentSelectors": [
+        "listing-link"
+      ],
+      "type": "SelectorText",
+      "selector": "span.postingtitletext",
+      "multiple": false,
+      "delay": 0,
+      "regex": ""
+    },
+    {
+      "id": "listing-description",
+      "parentSelectors": [
+        "listing-link"
+      ],
+      "type": "SelectorText",
+      "selector": "section#postingbody",
+      "multiple": false,
+      "delay": 0,
+      "regex": ""
+    },
+    {
+      "id": "listing-housing-type",
+      "parentSelectors": [
+        "listing-link"
+      ],
+      "type": "SelectorText",
+      "selector": "span.shared-line-bubble:nth-of-type(1)",
+      "multiple": false,
+      "delay": 0,
+      "regex": ""
+    },
+    {
+      "id": "listing-features",
+      "parentSelectors": [
+        "listing-link"
+      ],
+      "type": "SelectorText",
+      "selector": "p.attrgroup:nth-of-type(2)",
+      "multiple": false,
+      "delay": 0,
+      "regex": ""
+    },
+    {
+      "id": "listing-notices",
+      "parentSelectors": [
+        "listing-link"
+      ],
+      "type": "SelectorText",
+      "selector": ".notices li",
+      "multiple": false,
+      "delay": 0,
+      "regex": ""
+    },
+    {
+      "id": "listing-id",
+      "parentSelectors": [
+        "listing-link"
+      ],
+      "type": "SelectorText",
+      "selector": ".postinginfos p:nth-of-type(1)",
+      "multiple": false,
+      "delay": 0,
+      "regex": ""
+    },
+    {
+      "id": "listing-link",
+      "parentSelectors": [
+        "pagination"
+      ],
+      "type": "SelectorLink",
+      "selector": "a[data-ids]",
+      "multiple": true,
+      "delay": 0
+    },
+    {
+      "id": "listing-availability",
+      "parentSelectors": [
+        "listing-link"
+      ],
+      "type": "SelectorText",
+      "selector": "span.housing_movein_now",
+      "multiple": false,
+      "delay": 0,
+      "regex": ""
+    },
+    {
+      "id": "listing-posting-date",
+      "parentSelectors": [
+        "listing-link"
+      ],
+      "type": "SelectorText",
+      "selector": "#display-date time",
+      "multiple": false,
+      "delay": 0,
+      "regex": ""
+    },
+    {
+      "id": "listing-address",
+      "parentSelectors": [
+        "listing-link"
+      ],
+      "type": "SelectorText",
+      "selector": "div.mapaddress",
+      "multiple": false,
+      "delay": 0,
+      "regex": ""
+    },
+    {
+      "id": "listing-map-latitude",
+      "parentSelectors": [
+        "listing-link"
+      ],
+      "type": "SelectorElementAttribute",
+      "selector": "div.viewposting",
+      "multiple": false,
+      "delay": 0,
+      "extractAttribute": "data-latitude"
+    },
+    {
+      "id": "listing-map-longitude",
+      "parentSelectors": [
+        "listing-link"
+      ],
+      "type": "SelectorElementAttribute",
+      "selector": "div.viewposting",
+      "multiple": false,
+      "delay": 0,
+      "extractAttribute": "data-longitude"
+    },
+    {
+      "id": "listing-map-accuracy",
+      "parentSelectors": [
+        "listing-link"
+      ],
+      "type": "SelectorElementAttribute",
+      "selector": "div.viewposting",
+      "multiple": false,
+      "delay": 0,
+      "extractAttribute": "data-accuracy"
+    }
+  ]
+}
